@@ -1,0 +1,30 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+    <body>
+        <p>
+            To be able to access secure resources you need to be logged in. To login in, please enter the e-mail
+            you have associated with your user account and the login link will be e-mailed to you.
+        </p>
+        <p>
+            The link will take you to the resource you were attempting to access before reaching this page. You
+            will stay logged in until you explicitly sign out, using the Logout option in the menu.
+        </p>
+        <form class="form-horizontal" action="/login/send?returnUrl=@(Url.RenderContext.Context.Request.Query.returnUrl)" method="post">
+            <legend>Please enter your-email to have the login token sent to you</legend>
+            <label>E-mail</label>
+            <input type="text" name="email" placeholder="Your e-mail address" />
+            <input type="submit" class="btn btn-primary"/>
+        </form>
+        <p>
+            <em>In this demo there is only one registered user, john@doe.com</em>
+        </p>
+    </body>
+</html>

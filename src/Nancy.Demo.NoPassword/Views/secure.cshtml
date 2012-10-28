@@ -1,0 +1,18 @@
+﻿@inherits Nancy.ViewEngines.Razor.NancyRazorViewBase<dynamic>
+@{
+    Layout = "layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>
+            Congratulations! You are now viewing a secure resource of the demo. That means that you
+            have successfully been logged in using <strong>NoPassword</strong>. Unfortunatly that is
+            as exciting as it gets with this demo.
+        </p>
+        <p style="text-align: center;">
+            <img src="@Url.Content("~/content/nancy-vertical-bf-tb.png")" height="330" width="282" title="Nancy logo" alt="Nancy logo"/>
+        </p>
+    </body>
+</html>
