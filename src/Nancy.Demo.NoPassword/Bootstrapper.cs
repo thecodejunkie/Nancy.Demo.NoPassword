@@ -5,7 +5,7 @@ namespace Nancy.Demo.NoPassword
     using Nancy.Authentication.Forms;
     using Nancy.Bootstrapper;
     using Nancy.Cryptography;
-    using TinyIoC;
+    using TinyIoc;
 
     public class Bootstrapper : DefaultNancyBootstrapper
     {
